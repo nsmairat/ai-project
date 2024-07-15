@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
     <title>Italian AI Recipes Generator!</title>
   </head>
   <body>
     <div class="container">
       <header><h1>AI Pizza Recipes Generator 🍕</h1></header>
       <main>
-        <form id ="form">
+        <form id="form">
           <input
             type="text"
             placeholder="Enter the ingredient inspiring you today"
@@ -19,11 +20,12 @@
             required
             autocomplete="off"
             class="instructions"
+            id="user-instructions"
           />
           <input type="submit" class="submit-button" />
         </form>
         <br />
-        
+
         <div class="recipe" id="recipe"></div>
         <br />
       </main>
