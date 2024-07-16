@@ -10,23 +10,26 @@
   </head>
   <body>
     <div class="container">
-      <header><h1>AI Pizza Recipes Generator 🍕</h1></header>
+      <header><h1>🍕 AI Pizza Recipes Generator 🍕</h1></header>
       <main>
-        <form id="form">
-          <input
-            type="text"
-            placeholder="Enter the ingredient inspiring you today"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-instructions"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
+        <div class="form-container">
+          <form id="form">
+            <input
+              type="text"
+              placeholder="Enter the ingredient inspiring you today"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Mushrooms, Olives, Veggies...</div>
+        </div>
         <br />
 
-        <div class="recipe" id="recipe"></div>
+        <div class="recipe hidden" id="recipe"></div>
         <br />
       </main>
       <footer>

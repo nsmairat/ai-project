@@ -15,8 +15,12 @@ function generateRecipe(event) {
   let apiKey = "6a4bo439f4518f900acccae6f3t294be";
   let prompt = `Display the best pizza recipe based on ${instructionsInputElement.value}`;
   let context =
-    "You know about all the pizza in the world and I would like for you to display the best pizza recipe with the main ingredient typed by the user in the input, please. Also, I would like for you to add a title for the recipe you choose , please";
+    "return result using html: You know about all the pizza in the world and I would like for you to display the best pizza recipe with the main ingredient typed by the user in the input, please. Also, I would like for you to add a title for the recipe you choose and display the title in bold and centered on it's own line at the top, please";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+  let recipeEl = document.querySelector("#recipe");
+  recipeEl.classList.remove("hidden");
+  recipeEl.innerHTML = `<div class="generating"> ⏳ Generating an amazing pizza recipe featuring ${instructionsInputElement.value} just for you ❤️...</div>`;
+
   console.log("Generating pizza recipe...");
   console.log(`Prompt: ${prompt}`);
   console.log(`Context: ${context}`);
