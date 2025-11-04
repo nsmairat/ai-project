@@ -21,6 +21,16 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #785531;
+  text-align: center;
+  margin-top: -10px;
+}
+
+
 form {
   border-radius: 10px;
   display: flex;
